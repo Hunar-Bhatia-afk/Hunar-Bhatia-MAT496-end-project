@@ -80,7 +80,7 @@ Make a short -  3-5 min video of yourself, put it on youtube/googledrive, and pu
 I plan to execute these steps to complete my project.
 
 - [Done] Step 1 Project setup and Dependencies
-- [TODO] Step 2 Defining Models and Prompts
+- [Done] Step 2 Defining Models and Prompts
 - [TODO] Step 3 Building Core services
 - [TODO] Step 4 Designing the LangGraph Workflow
 
