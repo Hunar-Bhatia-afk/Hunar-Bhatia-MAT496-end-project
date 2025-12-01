@@ -82,8 +82,8 @@ I plan to execute these steps to complete my project.
 - [Done] Step 1 Project setup and Dependencies
 - [Done] Step 2 Defining Models and Prompts
 - [Done] Step 3 Firecrawl logic written
-- [TODO] Step 4 Building Core services
-- [TODO] Step 5 Designing the LangGraph Workflow
+- [Done] Step 4 Building Core services
+- [Done] Step 5 Designing the LangGraph Workflow
 
 ## Conclusion:
 
