@@ -24,15 +24,44 @@ The first purpose of the capstone project is to give a chance to revise all the 
 
 # Project report Template
 
-## Title: [your title goes here]
+## Title: Multi-Step Coding Research Agent using LangGraph, Tool Calling, and Semantic Search
 
 ## Overview
 
-[your overview goes here. My project does this that  etc]
+This project builds an advanced AI agent designed to act as a comprehensive coding and developer tool research assistant.
+
+Here's an overview of what it exactly does:
+
+Multi-Step Research: Unlike a simple chatbot, the agent follows a pre-defined, multi-stage workflow using LangGraph. This ensures a predictable and consistent research process.
+Web Data Retrieval (RAG & Tool Calling): It leverages Firecrawl (via its SDK, which functions as a tool) to perform web searches and scrape content from various websites. This retrieved information then augments the LLM's knowledge.
+Intelligent Data Extraction & Analysis (Structured Output): It uses a powerful technique called Structured Output with Pydantic models. This forces the underlying Large Language Model (LLM) to extract specific information (like pricing models, tech stacks, API availability, descriptions) from the scraped web content and present it in a clean, organized format, rather than just free-form text.
+Recommendation Generation: Finally, after gathering and analyzing data on multiple tools, the agent uses the LLM to provide concise recommendations based on the initial query and the collected data.
+In essence, it automates and structures the process of researching programming tools, providing clear, actionable insights.
 
 ## Reason for picking up this project
 
-Explain how this project is aligned with this course content.
+### This project strongly aligns with the course content by providing a practical implementation of several key AI and LLM concepts:
+
+#### Prompting: The project extensively uses various prompting strategies. This includes crafting clear system prompts to define the agent's persona and instructions (e.g., "You are a helpful assistant that can scrape websites...") and user prompts that guide the LLM's task at each stage (e.g., extracting tools from article content). This demonstrates effective communication with the LLM.
+
+#### Structured Output: A core feature of this project is its ability to produce highly organized and usable data. By integrating Pydantic models (CompanyAnalysis, CompanyInfo, ResearchState) with the LLM's with_structured_output capability, the project explicitly forces the LLM to output information (like pricing, tech stack, API availability) in a predefined JSON-like schema, ensuring data validation and downstream processing.
+
+#### Semantic Search: The project employs Firecrawl's search functionality, which goes beyond simple keyword matching. When the agent searches for "best Firebase alternatives" or "Google Cloud alternative," it aims to understand the context and intent of the query to retrieve highly relevant articles and information, showcasing an application of semantic search principles.
+
+#### Retrieval Augmented Generation (RAG): This project serves as an excellent example of a RAG system. It systematically:
+
+Retrieves external, up-to-date information by searching the web and scraping article content using Firecrawl.
+Augments the LLM's knowledge base by providing this retrieved content as context in the prompts.
+Generates highly informed and relevant responses (tool lists, analyses, recommendations) that are grounded in the real-time web data rather than just the LLM's pre-trained knowledge.
+Tool Calling (LLMs & MCP): The project demonstrates sophisticated tool integration. Initially, it shows how an LLM can abstractly call tools via an MCP (Model Context Protocol) server. More importantly, the advanced agent illustrates explicit tool calling by writing Python code that uses the Firecrawl SDK to manually execute web scraping and search functions. The LangGraph workflow then orchestrates when and how the LLM decides to invoke these specific tools to accomplish its multi-step research.
+
+#### LangGraph: State, Nodes, Graph: The entire advanced agent is built upon the LangGraph framework, directly addressing these concepts:
+
+##### Graph: The project constructs a directed graph of operations (extract_tools_step, research_step, analyze_step), providing a clear visual and logical flow for the agent's execution.
+##### Nodes: Each distinct step in the research process is defined as a separate "node" or function within the graph, making the workflow modular and manageable.
+##### State: A central ResearchState object (a Pydantic model) is utilized to maintain and pass information (like query, extracted tools, companies, analysis) between the nodes, ensuring that data collected in one stage is accessible and updated in subsequent stages of the workflow.
+
+____________________________________________________________________________________________________________________________________________________
 
 ## Video Summary Link: 
 
@@ -50,11 +79,10 @@ Make a short -  3-5 min video of yourself, put it on youtube/googledrive, and pu
 
 I plan to execute these steps to complete my project.
 
-- [TODO] Step 1 involves blah blah
-- [TODO] Step 2 involves blah blah
-- [TODO] Step 3 involves blah blah
-- ...
-- [TODO] Step n involves blah blah
+- [TODO] Step 1 Project setup and Dependencies
+- [TODO] Step 2 Defining Models and Prompts
+- [TODO] Step 3 Building Core services
+- [TODO] Step 4 Designing the LangGraph Workflow
 
 ## Conclusion:
 
