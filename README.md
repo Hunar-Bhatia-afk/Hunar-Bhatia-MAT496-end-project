@@ -40,7 +40,11 @@ In essence, it automates and structures the process of researching programming t
 
 ## Reason for picking up this project
 
-### This project strongly aligns with the course content by providing a practical implementation of several key AI and LLM concepts:
+## In my first year whenever I tried to look for a dev tool to make a project, I had to go through a million youtube videos and several chatgpt conversations to make sure that I am going to learn the technology with the best market demand, beginner-friendliness, industry use, future-proofing and ease of integration but NOT ANYMORE!!! 
+## So, I decided to make a project that would solve this issue and somewhat succeeded in it. So, now instead of asking here and there or looking for some info on dev tools via third-party sources, we can get to know the best dev tool tailored to our specific needs so that there's no hinderance in our learning.
+
+
+### Also, this project strongly aligns with the course content by providing a practical implementation of several key AI and LLM concepts:
 
 #### Prompting: The project extensively uses various prompting strategies. This includes crafting clear system prompts to define the agent's persona and instructions (e.g., "You are a helpful assistant that can scrape websites...") and user prompts that guide the LLM's task at each stage (e.g., extracting tools from article content). This demonstrates effective communication with the LLM.
 
@@ -50,7 +54,7 @@ In essence, it automates and structures the process of researching programming t
 
 #### Retrieval Augmented Generation (RAG): This project serves as an excellent example of a RAG system. It systematically:
 
-Retrieves external, up-to-date information by searching the web and scraping article content using Firecrawl.
+Retrieves external, up-to-date information by searching the web and scraping article content using Firecrawl. Even though firecrawl has made some changes in its modules but it works fine now.
 Augments the LLM's knowledge base by providing this retrieved content as context in the prompts.
 Generates highly informed and relevant responses (tool lists, analyses, recommendations) that are grounded in the real-time web data rather than just the LLM's pre-trained knowledge.
 Tool Calling (LLMs & MCP): The project demonstrates sophisticated tool integration. Initially, it shows how an LLM can abstractly call tools via an MCP (Model Context Protocol) server. More importantly, the advanced agent illustrates explicit tool calling by writing Python code that uses the Firecrawl SDK to manually execute web scraping and search functions. The LangGraph workflow then orchestrates when and how the LLM decides to invoke these specific tools to accomplish its multi-step research.
@@ -87,7 +91,13 @@ I plan to execute these steps to complete my project.
 
 ## Conclusion:
 
-I had planned to achieve {this this}. I think I have/have-not achieved the conclusion satisfactorily. The reason for your satisfaction/unsatisfaction.
+I had planned on working on another project earlier but it didn't work out and I had to delete the forked repo after I was done with about 40% of the work. It was basically an AI agent only but a bit more advanced as it's graph structure was more complex and it had several other technologies like permit.io for permissions and django for backend being used. The entire idea was to create an AI agent that would have a supervisor node that would decide which of the agents would be perfect for our task. The two agents were as follows-:
+
+1. Agent 1-: It was supposed to look for user asked info from TMDB(The movie database) - a third party API that I was planning on calling.
+2. Agent 2-: It was supposed to make any changes to our own SQLite database and perform standard CRUD operations according to our will all while having guardrails so that we won't have the agent going rogue.
+
+Things went south when I faced an issue integrating django with the jupyter notebooks so I put a halt to it for until endsems...but nvm that's life.
+I think I have achieved the conclusion somewhat satisfactorily. The reason for my unsatisfaction with my current project would be(if there had to be one) the firecrawl API not being as good as I thought it'd be as I have heard quite a bit about it from my peers but I'd rather use other tools for scraping. In a nutshell, it didn't feel that good being an enterprise level tool.
 
 ----------
 
