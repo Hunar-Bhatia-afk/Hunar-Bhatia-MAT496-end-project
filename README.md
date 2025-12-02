@@ -71,6 +71,9 @@ ________________________________________________________________________________
 
 Make a short -  3-5 min video of yourself, put it on youtube/googledrive, and put its link in your README.md.
 
+<img width="1372" height="514" alt="image" src="https://github.com/user-attachments/assets/5a3470a7-ea76-4ca5-8f5e-e28666c79946" />
+
+
 - you can use this free tool for recording https://screenrec.com/
 - Video format should be like this:
 - your face should be visible
